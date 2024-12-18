@@ -25,7 +25,7 @@ services:
       - pgsql
 
   pgsql:
-    image: 'postgres:15'
+    image: 'postgres:16'
     ports:
       - '${FORWARD_DB_PORT:-5432}:5432'
     environment:
