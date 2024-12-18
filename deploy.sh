@@ -12,7 +12,7 @@ echo "Ejecutando migraciones..."
 php artisan migrate --force
 # Ejecutar seeding si es necesario
 echo "Ejecutando seeders..."
-php artisan db:seed --class=RolesAndPermissionsSeeder
+php artisan db:seed
 # Cachear configuraciones
 echo "Cacheando configuraciones..."
 php artisan config:cache
