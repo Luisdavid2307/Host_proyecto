@@ -6,15 +6,6 @@ set -e
 echo "Instalando dependencias de Composer..."
 composer install --no-dev --optimize-autoloader
 
-
-# Ejecutar migraciones
-echo "Ejecutando migraciones..."
-php artisan migrate --force
-
-# Ejecutar seeders si es necesario
-echo "Ejecutando seeders..."
-php artisan db:seed
-
 # Borrar cache de configuraciones
 echo "Borrando cache de configuraciones..."
 php artisan config:cache
