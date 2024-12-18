@@ -5,7 +5,7 @@ COPY . /var/www/html
 # Establecer los permisos correctos para los archivos
 RUN chown -R www-data:www-data /var/www/html
 # Instalar dependencias de PHP con Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --installdir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install dir=/usr/local/bin --filename=composer
 # Instalar las dependencias de Laravel
 RUN composer install --no-dev --optimize-autoloader
 # Ejecutar los comandos de caché en producción
