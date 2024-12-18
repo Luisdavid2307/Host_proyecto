@@ -6,9 +6,6 @@ set -e
 echo "Instalando dependencias de Composer..."
 composer install --no-dev --optimize-autoloader
 
-# Reiniciar migraciones
-echo "Reiniciando migraciones"
-php artisan migrate:reset --force
 
 # Ejecutar migraciones
 echo "Ejecutando migraciones..."
