@@ -34,14 +34,6 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'nombres_usuario' => 'required|string|max:255',
-            'email' => 'required|email',
-            'password' => 'required|min:6',
-            'id_rol' => 'required|integer',
-            'telefono_usuario' => 'nullable|string',
-            'direccion_usuario' => 'nullable|string',
-        ]);
         
         $usuario = new Usuario();
         $usuario->nombres_usuario = $request->nombres_usuario;
