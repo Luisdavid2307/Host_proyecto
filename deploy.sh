@@ -2,10 +2,6 @@
 # Asegúrate de que se detengan en caso de error
 set -e
 
-# Instalar Faker si no está instalado
-echo "Instalando Faker..."
-composer require fakerphp/faker --dev
-
 # Instalar dependencias de Composer
 echo "Instalando dependencias de Composer..."
 composer install --no-dev --optimize-autoloader
